@@ -6,9 +6,10 @@
 
     <title>Emin Aleshaiker | Data Scientist</title>
 
-    <meta name="description" content="Emin Aleshaiker — Data Scientist specialising in machine learning, artificial intelligence, data analytics and financial data.">
+    <meta name="description" content="Emin Aleshaiker — Data Scientist specialising in machine learning, artificial intelligence, data analytics and intelligent systems.">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -36,7 +37,9 @@
             margin: auto;
         }
 
-        /* NAVIGATION */
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
             position: fixed;
@@ -77,7 +80,10 @@
             color: #fff;
         }
 
-        /* HERO */
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             min-height: 100vh;
@@ -142,7 +148,10 @@
             border-color: #fff;
         }
 
-        /* SECTIONS */
+
+        /* =========================
+           SECTIONS
+        ========================= */
 
         section {
             padding: 110px 0;
@@ -164,7 +173,10 @@
             letter-spacing: -1.5px;
         }
 
-        /* ABOUT */
+
+        /* =========================
+           ABOUT
+        ========================= */
 
         .about-grid {
             display: grid;
@@ -178,23 +190,25 @@
             margin-bottom: 20px;
         }
 
-        .education-card {
+        .about-highlight {
             border-left: 1px solid #444;
             padding-left: 25px;
-            margin-bottom: 32px;
         }
 
-        .education-card h3 {
+        .about-highlight h3 {
             font-size: 18px;
-            margin-bottom: 5px;
+            margin-bottom: 12px;
         }
 
-        .education-card p {
+        .about-highlight p {
             color: #888;
             font-size: 14px;
         }
 
-        /* SKILLS */
+
+        /* =========================
+           SKILLS
+        ========================= */
 
         .skills-grid {
             display: grid;
@@ -225,7 +239,10 @@
             font-size: 14px;
         }
 
-        /* PROJECTS */
+
+        /* =========================
+           PROJECTS
+        ========================= */
 
         .projects {
             display: grid;
@@ -246,6 +263,10 @@
             transform: translateY(-4px);
         }
 
+        .project.featured {
+            grid-column: span 2;
+        }
+
         .project-number {
             color: #555;
             font-size: 12px;
@@ -254,7 +275,7 @@
         }
 
         .project h3 {
-            font-size: 22px;
+            font-size: 24px;
             margin-bottom: 13px;
         }
 
@@ -262,6 +283,7 @@
             color: #999;
             font-size: 15px;
             margin-bottom: 22px;
+            max-width: 800px;
         }
 
         .tags {
@@ -291,71 +313,10 @@
             color: #fff;
         }
 
-        /* EXPERIENCE */
 
-        .experience-item {
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            gap: 40px;
-            padding: 35px 0;
-            border-bottom: 1px solid #222;
-        }
-
-        .experience-date {
-            color: #666;
-            font-size: 14px;
-        }
-
-        .experience-content h3 {
-            font-size: 21px;
-            margin-bottom: 3px;
-        }
-
-        .company {
-            color: #777;
-            margin-bottom: 15px;
-        }
-
-        .experience-content ul {
-            padding-left: 20px;
-            color: #999;
-        }
-
-        .experience-content li {
-            margin-bottom: 8px;
-        }
-
-        /* EDUCATION */
-
-        .education-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .education-box {
-            border: 1px solid #252525;
-            background: #0d0d0d;
-            border-radius: 8px;
-            padding: 28px;
-        }
-
-        .education-box h3 {
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
-
-        .education-box .university {
-            color: #aaa;
-            margin-bottom: 8px;
-        }
-
-        .education-box .details {
-            color: #777;
-            font-size: 14px;
-        }
-
-        /* CONTACT */
+        /* =========================
+           CONTACT
+        ========================= */
 
         .contact {
             text-align: center;
@@ -390,7 +351,10 @@
             color: #fff;
         }
 
-        /* FOOTER */
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             border-top: 1px solid #222;
@@ -400,7 +364,10 @@
             text-align: center;
         }
 
-        /* MOBILE */
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 800px) {
 
@@ -414,46 +381,67 @@
 
             .about-grid,
             .skills-grid,
-            .projects,
-            .education-list {
+            .projects {
                 grid-template-columns: 1fr;
             }
 
-            .experience-item {
-                grid-template-columns: 1fr;
-                gap: 10px;
+            .project.featured {
+                grid-column: span 1;
             }
 
             section {
                 padding: 80px 0;
             }
         }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- NAVIGATION -->
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
 
     <nav>
+
         <div class="container nav-container">
 
-            <a href="#home" class="logo">EA.</a>
+            <a href="#home" class="logo">
+                EA.
+            </a>
 
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
             </ul>
 
         </div>
+
     </nav>
 
 
-    <!-- HERO -->
+
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <section class="hero" id="home">
 
@@ -501,7 +489,10 @@
     </section>
 
 
-    <!-- ABOUT -->
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
 
     <section id="about">
 
@@ -534,29 +525,22 @@
 
                 </div>
 
-                <div>
 
-                    <div class="education-card">
+                <div class="about-highlight">
 
-                        <h3>MSc Data Science</h3>
+                    <h3>
+                        Areas of Interest
+                    </h3>
 
-                        <p>
-                            City, University of London<br>
-                            Merit
-                        </p>
-
-                    </div>
-
-                    <div class="education-card">
-
-                        <h3>BEng Mechanical Engineering</h3>
-
-                        <p>
-                            City, University of London<br>
-                            First Class
-                        </p>
-
-                    </div>
+                    <p>
+                        Machine Learning<br>
+                        Artificial Intelligence<br>
+                        Financial Data Science<br>
+                        Natural Language Processing<br>
+                        Data Analytics<br>
+                        Quantitative Research<br>
+                        Retrieval-Augmented Generation
+                    </p>
 
                 </div>
 
@@ -567,7 +551,10 @@
     </section>
 
 
-    <!-- SKILLS -->
+
+    <!-- =========================
+         SKILLS
+    ========================= -->
 
     <section id="skills">
 
@@ -583,9 +570,12 @@
 
             <div class="skills-grid">
 
+
                 <div class="skill-card">
 
-                    <h3>Programming & Data</h3>
+                    <h3>
+                        Programming & Data
+                    </h3>
 
                     <p>
                         Python · Pandas · NumPy · Scikit-learn · MATLAB · R · Excel · Jupyter
@@ -593,9 +583,12 @@
 
                 </div>
 
+
                 <div class="skill-card">
 
-                    <h3>Machine Learning</h3>
+                    <h3>
+                        Machine Learning
+                    </h3>
 
                     <p>
                         Classification · Regression · Feature Engineering · Model Evaluation · Predictive Modelling · Supervised Learning
@@ -603,9 +596,12 @@
 
                 </div>
 
+
                 <div class="skill-card">
 
-                    <h3>Deep Learning</h3>
+                    <h3>
+                        Deep Learning
+                    </h3>
 
                     <p>
                         PyTorch · TensorFlow · Keras · Neural Networks · Deep Learning
@@ -613,9 +609,12 @@
 
                 </div>
 
+
                 <div class="skill-card">
 
-                    <h3>AI & NLP</h3>
+                    <h3>
+                        AI & NLP
+                    </h3>
 
                     <p>
                         RAG · LLMs · NLP · Computer Vision · Prompt Engineering · Azure OpenAI
@@ -623,9 +622,12 @@
 
                 </div>
 
+
                 <div class="skill-card">
 
-                    <h3>Data Analytics</h3>
+                    <h3>
+                        Data Analytics
+                    </h3>
 
                     <p>
                         Exploratory Data Analysis · Statistical Analysis · Data Cleaning · Data Visualisation · Anomaly Detection
@@ -633,15 +635,19 @@
 
                 </div>
 
+
                 <div class="skill-card">
 
-                    <h3>AI & Retrieval</h3>
+                    <h3>
+                        Retrieval & AI Systems
+                    </h3>
 
                     <p>
                         FAISS · Embeddings · Semantic Retrieval · PyMuPDF · Hugging Face · Structured Information Extraction
                     </p>
 
                 </div>
+
 
             </div>
 
@@ -650,7 +656,10 @@
     </section>
 
 
-    <!-- PROJECTS -->
+
+    <!-- =========================
+         PROJECTS
+    ========================= -->
 
     <section id="projects">
 
@@ -664,15 +673,16 @@
                 Selected data science work
             </h2>
 
+
             <div class="projects">
 
 
-                <!-- PROJECT 1 -->
+                <!-- FEATURED PROJECT -->
 
-                <div class="project">
+                <div class="project featured">
 
                     <div class="project-number">
-                        PROJECT 01 · MSc DISSERTATION
+                        PROJECT 01 · MSc DISSERTATION · FEATURED
                     </div>
 
                     <h3>
@@ -680,24 +690,51 @@
                     </h3>
 
                     <p>
-                        Developed a multimodal Retrieval-Augmented Generation system for extracting structured financial information from complex and inconsistently formatted financial reports. The system combined document image processing, vision-based extraction, embeddings and semantic retrieval.
+                        Developed a multimodal Retrieval-Augmented Generation system for extracting structured financial information from complex and inconsistently formatted financial reports. The system combined document image processing, vision-based extraction, embeddings and semantic retrieval to transform unstructured financial documents into structured information.
                     </p>
 
                     <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Azure OpenAI</span>
-                        <span class="tag">RAG</span>
-                        <span class="tag">FAISS</span>
-                        <span class="tag">PyMuPDF</span>
-                        <span class="tag">Embeddings</span>
-                        <span class="tag">NLP</span>
+
+                        <span class="tag">
+                            Python
+                        </span>
+
+                        <span class="tag">
+                            Azure OpenAI
+                        </span>
+
+                        <span class="tag">
+                            RAG
+                        </span>
+
+                        <span class="tag">
+                            FAISS
+                        </span>
+
+                        <span class="tag">
+                            PyMuPDF
+                        </span>
+
+                        <span class="tag">
+                            Embeddings
+                        </span>
+
+                        <span class="tag">
+                            NLP
+                        </span>
+
+                        <span class="tag">
+                            Computer Vision
+                        </span>
+
                     </div>
 
                     <a href="#" class="project-link">
-                        Project details →
+                        View project →
                     </a>
 
                 </div>
+
 
 
                 <!-- PROJECT 2 -->
@@ -713,23 +750,43 @@
                     </h3>
 
                     <p>
-                        Conducted a comparative study of Support Vector Machines and a CNN-based model for predicting income classification using the Adult Income dataset. The project covered data preprocessing, feature encoding, scaling, model training and evaluation.
+                        Conducted a comparative study of Support Vector Machines and a CNN-based model for predicting income classification using the Adult Income dataset. The project covered data preprocessing, categorical encoding, feature scaling, model training and evaluation.
                     </p>
 
                     <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Scikit-learn</span>
-                        <span class="tag">PyTorch</span>
-                        <span class="tag">SVM</span>
-                        <span class="tag">CNN</span>
-                        <span class="tag">Classification</span>
+
+                        <span class="tag">
+                            Python
+                        </span>
+
+                        <span class="tag">
+                            Scikit-learn
+                        </span>
+
+                        <span class="tag">
+                            PyTorch
+                        </span>
+
+                        <span class="tag">
+                            SVM
+                        </span>
+
+                        <span class="tag">
+                            CNN
+                        </span>
+
+                        <span class="tag">
+                            Classification
+                        </span>
+
                     </div>
 
                     <a href="#" class="project-link">
-                        Project details →
+                        View project →
                     </a>
 
                 </div>
+
 
 
                 <!-- PROJECT 3 -->
@@ -745,22 +802,39 @@
                     </h3>
 
                     <p>
-                        Analysed a public bike-sharing dataset to explore usage patterns, trends and relationships between different variables. The project focused on transforming raw data into meaningful visual insights.
+                        Analysed a public bike-sharing dataset to explore usage patterns, trends and relationships between variables. The project focused on exploratory analysis and transforming raw data into meaningful visual insights.
                     </p>
 
                     <div class="tags">
-                        <span class="tag">Data Analysis</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Visualisation</span>
-                        <span class="tag">EDA</span>
-                        <span class="tag">Statistics</span>
+
+                        <span class="tag">
+                            Data Analysis
+                        </span>
+
+                        <span class="tag">
+                            Python
+                        </span>
+
+                        <span class="tag">
+                            Visualisation
+                        </span>
+
+                        <span class="tag">
+                            EDA
+                        </span>
+
+                        <span class="tag">
+                            Statistics
+                        </span>
+
                     </div>
 
                     <a href="#" class="project-link">
-                        Project details →
+                        View project →
                     </a>
 
                 </div>
+
 
 
                 <!-- PROJECT 4 -->
@@ -780,18 +854,35 @@
                     </p>
 
                     <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Neural Networks</span>
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">Classification</span>
-                        <span class="tag">Model Evaluation</span>
+
+                        <span class="tag">
+                            Python
+                        </span>
+
+                        <span class="tag">
+                            Neural Networks
+                        </span>
+
+                        <span class="tag">
+                            Machine Learning
+                        </span>
+
+                        <span class="tag">
+                            Classification
+                        </span>
+
+                        <span class="tag">
+                            Model Evaluation
+                        </span>
+
                     </div>
 
                     <a href="#" class="project-link">
-                        Project details →
+                        View project →
                     </a>
 
                 </div>
+
 
 
                 <!-- FUTURE PROJECT -->
@@ -807,16 +898,27 @@
                     </h3>
 
                     <p>
-                        This portfolio will continue to grow with additional projects covering machine learning, data analytics, artificial intelligence and financial data.
+                        Additional projects covering machine learning, artificial intelligence, data analytics, financial data and predictive modelling will be added as the portfolio develops.
                     </p>
 
                     <div class="tags">
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">AI</span>
-                        <span class="tag">Data Science</span>
+
+                        <span class="tag">
+                            Machine Learning
+                        </span>
+
+                        <span class="tag">
+                            AI
+                        </span>
+
+                        <span class="tag">
+                            Data Science
+                        </span>
+
                     </div>
 
                 </div>
+
 
             </div>
 
@@ -825,171 +927,17 @@
     </section>
 
 
-    <!-- EXPERIENCE -->
 
-    <section id="experience">
-
-        <div class="container">
-
-            <div class="section-label">
-                04 — Experience
-            </div>
-
-            <h2 class="section-title">
-                Experience
-            </h2>
-
-
-            <div class="experience-item">
-
-                <div class="experience-date">
-                    Jul 2024 — Present
-                </div>
-
-                <div class="experience-content">
-
-                    <h3>
-                        On-Site Manager
-                    </h3>
-
-                    <div class="company">
-                        Amazon DSP · London
-                    </div>
-
-                    <ul>
-
-                        <li>
-                            Managed day-to-day delivery operations, including route planning, dispatch and workflow coordination.
-                        </li>
-
-                        <li>
-                            Monitored key performance metrics and operational performance to identify issues and improve productivity.
-                        </li>
-
-                        <li>
-                            Led and supported delivery associates through coaching, performance management and operational problem-solving.
-                        </li>
-
-                        <li>
-                            Worked in a fast-paced environment requiring data-driven decision-making, organisation and prioritisation.
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-            <div class="experience-item">
-
-                <div class="experience-date">
-                    Financial Data Analysis
-                </div>
-
-                <div class="experience-content">
-
-                    <h3>
-                        Financial Data Analysis Intern
-                    </h3>
-
-                    <div class="company">
-                        Careline
-                    </div>
-
-                    <ul>
-
-                        <li>
-                            Analysed and interpreted financial and operational data to identify trends, investigate anomalies and support data-driven decision-making.
-                        </li>
-
-                        <li>
-                            Produced Excel reports and performance analyses, transforming financial data into clear insights.
-                        </li>
-
-                        <li>
-                            Conducted data validation and quality checks to identify discrepancies and maintain reliable financial records.
-                        </li>
-
-                        <li>
-                            Monitored financial and operational performance indicators and communicated findings to support business performance.
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- EDUCATION -->
-
-    <section id="education">
-
-        <div class="container">
-
-            <div class="section-label">
-                05 — Education
-            </div>
-
-            <h2 class="section-title">
-                Education
-            </h2>
-
-            <div class="education-list">
-
-                <div class="education-box">
-
-                    <h3>
-                        MSc Data Science
-                    </h3>
-
-                    <div class="university">
-                        City, University of London
-                    </div>
-
-                    <div class="details">
-                        Merit · Data Science · Machine Learning · Neural Computing · NLP · Visual Analytics
-                    </div>
-
-                </div>
-
-
-                <div class="education-box">
-
-                    <h3>
-                        BEng Mechanical Engineering
-                    </h3>
-
-                    <div class="university">
-                        City, University of London
-                    </div>
-
-                    <div class="details">
-                        First Class · Quantitative Analysis · Mathematical Modelling · Engineering Analysis
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
+    <!-- =========================
+         CONTACT
+    ========================= -->
 
     <section id="contact">
 
         <div class="container contact">
 
             <div class="section-label">
-                06 — Contact
+                04 — Contact
             </div>
 
             <h2>
@@ -1021,7 +969,10 @@
     </section>
 
 
-    <!-- FOOTER -->
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
 
@@ -1032,6 +983,7 @@
         </div>
 
     </footer>
+
 
 </body>
 </html>
