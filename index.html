@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Emin Aleshaiker | Data Scientist</title>
+    <title>Emin Aleshaiker | Data Science & AI Portfolio</title>
 
-    <meta name="description" content="Emin Aleshaiker — Data Scientist specialising in machine learning, artificial intelligence, data analytics and intelligent systems.">
+    <meta name="description" content="Emin Aleshaiker — Data Science and AI portfolio featuring machine learning, deep learning, RAG, financial document extraction and data analytics projects.">
 
     <style>
 
@@ -24,7 +24,7 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
             background: #080808;
             color: #f5f5f5;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         a {
@@ -33,9 +33,10 @@
         }
 
         .container {
-            width: min(1100px, 90%);
+            width: min(1120px, 90%);
             margin: auto;
         }
+
 
         /* =========================
            NAVIGATION
@@ -46,7 +47,7 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(8, 8, 8, 0.9);
+            background: rgba(8, 8, 8, 0.92);
             backdrop-filter: blur(14px);
             border-bottom: 1px solid #202020;
         }
@@ -93,7 +94,7 @@
         }
 
         .hero-content {
-            max-width: 850px;
+            max-width: 900px;
         }
 
         .hero-label {
@@ -116,7 +117,7 @@
         }
 
         .hero-description {
-            max-width: 750px;
+            max-width: 780px;
             font-size: 19px;
             color: #aaa;
             margin-bottom: 35px;
@@ -241,7 +242,7 @@
 
 
         /* =========================
-           PROJECTS
+           PROJECT CARDS
         ========================= */
 
         .projects {
@@ -276,6 +277,7 @@
 
         .project h3 {
             font-size: 24px;
+            line-height: 1.3;
             margin-bottom: 13px;
         }
 
@@ -283,7 +285,6 @@
             color: #999;
             font-size: 15px;
             margin-bottom: 22px;
-            max-width: 800px;
         }
 
         .tags {
@@ -307,10 +308,139 @@
             font-size: 13px;
             border-bottom: 1px solid #444;
             padding-bottom: 3px;
+            cursor: pointer;
         }
 
         .project-link:hover {
             color: #fff;
+        }
+
+
+        /* =========================
+           PROJECT DETAILS
+        ========================= */
+
+        .project-details {
+            margin-top: 20px;
+            padding-top: 25px;
+            border-top: 1px solid #242424;
+            display: none;
+        }
+
+        .project-details.active {
+            display: block;
+        }
+
+        .project-details h4 {
+            font-size: 17px;
+            margin: 28px 0 10px;
+        }
+
+        .project-details h4:first-child {
+            margin-top: 0;
+        }
+
+        .project-details p {
+            color: #999;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .project-details ul {
+            padding-left: 20px;
+            color: #999;
+            margin-bottom: 15px;
+        }
+
+        .project-details li {
+            margin-bottom: 7px;
+        }
+
+
+        /* =========================
+           RESULTS
+        ========================= */
+
+        .results {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin: 25px 0;
+        }
+
+        .result-box {
+            border: 1px solid #292929;
+            background: #101010;
+            padding: 18px;
+            border-radius: 7px;
+            text-align: center;
+        }
+
+        .result-number {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .result-label {
+            color: #777;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+
+        /* =========================
+           COMPARISON TABLE
+        ========================= */
+
+        .comparison {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 14px;
+        }
+
+        .comparison th,
+        .comparison td {
+            padding: 13px;
+            text-align: left;
+            border-bottom: 1px solid #272727;
+        }
+
+        .comparison th {
+            color: #ddd;
+            font-weight: 600;
+        }
+
+        .comparison td {
+            color: #999;
+        }
+
+
+        /* =========================
+           PROJECT FILE BUTTONS
+        ========================= */
+
+        .file-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .file-button {
+            padding: 10px 15px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            color: #aaa;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .file-button:hover {
+            color: #fff;
+            border-color: #666;
         }
 
 
@@ -330,7 +460,7 @@
 
         .contact p {
             color: #888;
-            max-width: 620px;
+            max-width: 650px;
             margin: 0 auto 30px;
         }
 
@@ -389,6 +519,10 @@
                 grid-column: span 1;
             }
 
+            .results {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             section {
                 padding: 80px 0;
             }
@@ -401,564 +535,85 @@
 <body>
 
 
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-    <nav>
+<nav>
 
-        <div class="container nav-container">
+    <div class="container nav-container">
 
-            <a href="#home" class="logo">
-                EA.
-            </a>
+        <a href="#home" class="logo">
+            EA.
+        </a>
 
-            <ul class="nav-links">
+        <ul class="nav-links">
 
-                <li>
-                    <a href="#about">About</a>
-                </li>
+            <li>
+                <a href="#about">About</a>
+            </li>
 
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
 
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
 
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
 
-            </ul>
+        </ul>
 
-        </div>
+    </div>
 
-    </nav>
+</nav>
 
 
+<!-- =========================
+     HERO
+========================= -->
 
-    <!-- =========================
-         HERO
-    ========================= -->
+<section class="hero" id="home">
 
-    <section class="hero" id="home">
+    <div class="container">
 
-        <div class="container">
+        <div class="hero-content">
 
-            <div class="hero-content">
-
-                <div class="hero-label">
-                    Data Science · AI · Machine Learning
-                </div>
-
-                <h1>
-                    Emin<br>
-                    <span>Aleshaiker</span>
-                </h1>
-
-                <p class="hero-description">
-                    Data Scientist specialising in machine learning, artificial intelligence, data analytics and intelligent systems, with a focus on applying data-driven methods to real-world problems.
-                </p>
-
-                <div class="buttons">
-
-                    <a href="#projects" class="button primary">
-                        View Projects
-                    </a>
-
-                    <a href="#contact" class="button">
-                        Contact Me
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/emin-aleshaiker-269534204/" target="_blank" class="button">
-                        LinkedIn
-                    </a>
-
-                    <a href="https://github.com/Eminal12" target="_blank" class="button">
-                        GitHub
-                    </a>
-
-                </div>
-
+            <div class="hero-label">
+                Data Science · AI · Machine Learning
             </div>
 
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         ABOUT
-    ========================= -->
-
-    <section id="about">
-
-        <div class="container">
-
-            <div class="section-label">
-                01 — About
-            </div>
-
-            <h2 class="section-title">
-                Turning data into<br>
-                intelligent solutions.
-            </h2>
-
-            <div class="about-grid">
-
-                <div class="about-text">
-
-                    <p>
-                        I am a Data Scientist with an MSc in Data Science and a strong interest in machine learning, artificial intelligence, statistical analysis and financial data.
-                    </p>
-
-                    <p>
-                        My academic and project experience covers supervised learning, deep learning, natural language processing, computer vision, data analytics and Retrieval-Augmented Generation.
-                    </p>
-
-                    <p>
-                        I enjoy working with complex datasets, identifying meaningful patterns and developing practical data-driven solutions. I am particularly interested in applying AI and machine learning to financial, business and technology problems.
-                    </p>
-
-                </div>
-
-
-                <div class="about-highlight">
-
-                    <h3>
-                        Areas of Interest
-                    </h3>
-
-                    <p>
-                        Machine Learning<br>
-                        Artificial Intelligence<br>
-                        Financial Data Science<br>
-                        Natural Language Processing<br>
-                        Data Analytics<br>
-                        Quantitative Research<br>
-                        Retrieval-Augmented Generation
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         SKILLS
-    ========================= -->
-
-    <section id="skills">
-
-        <div class="container">
-
-            <div class="section-label">
-                02 — Technical Skills
-            </div>
-
-            <h2 class="section-title">
-                My toolkit
-            </h2>
-
-            <div class="skills-grid">
-
-
-                <div class="skill-card">
-
-                    <h3>
-                        Programming & Data
-                    </h3>
-
-                    <p>
-                        Python · Pandas · NumPy · Scikit-learn · MATLAB · R · Excel · Jupyter
-                    </p>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <h3>
-                        Machine Learning
-                    </h3>
-
-                    <p>
-                        Classification · Regression · Feature Engineering · Model Evaluation · Predictive Modelling · Supervised Learning
-                    </p>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <h3>
-                        Deep Learning
-                    </h3>
-
-                    <p>
-                        PyTorch · TensorFlow · Keras · Neural Networks · Deep Learning
-                    </p>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <h3>
-                        AI & NLP
-                    </h3>
-
-                    <p>
-                        RAG · LLMs · NLP · Computer Vision · Prompt Engineering · Azure OpenAI
-                    </p>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <h3>
-                        Data Analytics
-                    </h3>
-
-                    <p>
-                        Exploratory Data Analysis · Statistical Analysis · Data Cleaning · Data Visualisation · Anomaly Detection
-                    </p>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <h3>
-                        Retrieval & AI Systems
-                    </h3>
-
-                    <p>
-                        FAISS · Embeddings · Semantic Retrieval · PyMuPDF · Hugging Face · Structured Information Extraction
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         PROJECTS
-    ========================= -->
-
-    <section id="projects">
-
-        <div class="container">
-
-            <div class="section-label">
-                03 — Projects
-            </div>
-
-            <h2 class="section-title">
-                Selected data science work
-            </h2>
-
-
-            <div class="projects">
-
-
-                <!-- FEATURED PROJECT -->
-
-                <div class="project featured">
-
-                    <div class="project-number">
-                        PROJECT 01 · MSc DISSERTATION · FEATURED
-                    </div>
-
-                    <h3>
-                        Multimodal RAG for Financial Document Extraction
-                    </h3>
-
-                    <p>
-                        Developed a multimodal Retrieval-Augmented Generation system for extracting structured financial information from complex and inconsistently formatted financial reports. The system combined document image processing, vision-based extraction, embeddings and semantic retrieval to transform unstructured financial documents into structured information.
-                    </p>
-
-                    <div class="tags">
-
-                        <span class="tag">
-                            Python
-                        </span>
-
-                        <span class="tag">
-                            Azure OpenAI
-                        </span>
-
-                        <span class="tag">
-                            RAG
-                        </span>
-
-                        <span class="tag">
-                            FAISS
-                        </span>
-
-                        <span class="tag">
-                            PyMuPDF
-                        </span>
-
-                        <span class="tag">
-                            Embeddings
-                        </span>
-
-                        <span class="tag">
-                            NLP
-                        </span>
-
-                        <span class="tag">
-                            Computer Vision
-                        </span>
-
-                    </div>
-
-                    <a href="#" class="project-link">
-                        View project →
-                    </a>
-
-                </div>
-
-
-
-                <!-- PROJECT 2 -->
-
-                <div class="project">
-
-                    <div class="project-number">
-                        PROJECT 02 · MACHINE LEARNING
-                    </div>
-
-                    <h3>
-                        SVM vs CNN — Adult Income Classification
-                    </h3>
-
-                    <p>
-                        Conducted a comparative study of Support Vector Machines and a CNN-based model for predicting income classification using the Adult Income dataset. The project covered data preprocessing, categorical encoding, feature scaling, model training and evaluation.
-                    </p>
-
-                    <div class="tags">
-
-                        <span class="tag">
-                            Python
-                        </span>
-
-                        <span class="tag">
-                            Scikit-learn
-                        </span>
-
-                        <span class="tag">
-                            PyTorch
-                        </span>
-
-                        <span class="tag">
-                            SVM
-                        </span>
-
-                        <span class="tag">
-                            CNN
-                        </span>
-
-                        <span class="tag">
-                            Classification
-                        </span>
-
-                    </div>
-
-                    <a href="#" class="project-link">
-                        View project →
-                    </a>
-
-                </div>
-
-
-
-                <!-- PROJECT 3 -->
-
-                <div class="project">
-
-                    <div class="project-number">
-                        PROJECT 03 · VISUAL ANALYTICS
-                    </div>
-
-                    <h3>
-                        Bike Sharing — Visual Analytics
-                    </h3>
-
-                    <p>
-                        Analysed a public bike-sharing dataset to explore usage patterns, trends and relationships between variables. The project focused on exploratory analysis and transforming raw data into meaningful visual insights.
-                    </p>
-
-                    <div class="tags">
-
-                        <span class="tag">
-                            Data Analysis
-                        </span>
-
-                        <span class="tag">
-                            Python
-                        </span>
-
-                        <span class="tag">
-                            Visualisation
-                        </span>
-
-                        <span class="tag">
-                            EDA
-                        </span>
-
-                        <span class="tag">
-                            Statistics
-                        </span>
-
-                    </div>
-
-                    <a href="#" class="project-link">
-                        View project →
-                    </a>
-
-                </div>
-
-
-
-                <!-- PROJECT 4 -->
-
-                <div class="project">
-
-                    <div class="project-number">
-                        PROJECT 04 · NEURAL COMPUTING
-                    </div>
-
-                    <h3>
-                        Banknote Authentication
-                    </h3>
-
-                    <p>
-                        Applied neural computing and machine-learning techniques to the Banknote Authentication dataset to classify genuine and counterfeit banknotes. The project involved data preparation, model development and performance evaluation.
-                    </p>
-
-                    <div class="tags">
-
-                        <span class="tag">
-                            Python
-                        </span>
-
-                        <span class="tag">
-                            Neural Networks
-                        </span>
-
-                        <span class="tag">
-                            Machine Learning
-                        </span>
-
-                        <span class="tag">
-                            Classification
-                        </span>
-
-                        <span class="tag">
-                            Model Evaluation
-                        </span>
-
-                    </div>
-
-                    <a href="#" class="project-link">
-                        View project →
-                    </a>
-
-                </div>
-
-
-
-                <!-- FUTURE PROJECT -->
-
-                <div class="project">
-
-                    <div class="project-number">
-                        PROJECT 05 · COMING SOON
-                    </div>
-
-                    <h3>
-                        More Data Science Projects
-                    </h3>
-
-                    <p>
-                        Additional projects covering machine learning, artificial intelligence, data analytics, financial data and predictive modelling will be added as the portfolio develops.
-                    </p>
-
-                    <div class="tags">
-
-                        <span class="tag">
-                            Machine Learning
-                        </span>
-
-                        <span class="tag">
-                            AI
-                        </span>
-
-                        <span class="tag">
-                            Data Science
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         CONTACT
-    ========================= -->
-
-    <section id="contact">
-
-        <div class="container contact">
-
-            <div class="section-label">
-                04 — Contact
-            </div>
-
-            <h2>
-                Let's connect.
-            </h2>
-
-            <p>
-                I'm interested in opportunities across Data Science, Machine Learning, Artificial Intelligence, Data Analytics and Quantitative Research.
+            <h1>
+                Emin<br>
+                <span>Aleshaiker</span>
+            </h1>
+
+            <p class="hero-description">
+                Data Science graduate with a background in Mechanical Engineering, specialising in machine learning, artificial intelligence, data analytics and intelligent information-extraction systems.
             </p>
 
-            <div class="contact-links">
+            <div class="buttons">
 
-                <a href="mailto:emin_aleshaiker@hotmail.com">
-                    Email
+                <a href="#projects" class="button primary">
+                    View Projects
                 </a>
 
-                <a href="https://www.linkedin.com/in/emin-aleshaiker-269534204/" target="_blank">
+                <a href="#contact" class="button">
+                    Contact Me
+                </a>
+
+                <a href="https://www.linkedin.com/in/emin-aleshaiker-269534204/"
+                   target="_blank"
+                   class="button">
                     LinkedIn
                 </a>
 
-                <a href="https://github.com/Eminal12" target="_blank">
+                <a href="https://github.com/Eminal12"
+                   target="_blank"
+                   class="button">
                     GitHub
                 </a>
 
@@ -966,23 +621,873 @@
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
+<!-- =========================
+     ABOUT
+========================= -->
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
+<section id="about">
 
-    <footer>
+    <div class="container">
 
-        <div class="container">
+        <div class="section-label">
+            01 — About
+        </div>
 
-            © 2026 Emin Aleshaiker · Data Science Portfolio
+        <h2 class="section-title">
+            Turning data into<br>
+            intelligent solutions.
+        </h2>
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <p>
+                    I am a Data Science graduate with an MSc in Data Science and a background in Mechanical Engineering. My academic and project experience combines machine learning, artificial intelligence, data analytics and computational problem solving.
+                </p>
+
+                <p>
+                    My work includes supervised machine learning, neural computing, deep learning, visual analytics and Retrieval-Augmented Generation. I have developed projects using Python, PyTorch, Scikit-learn, Azure OpenAI, FAISS and PyMuPDF.
+                </p>
+
+                <p>
+                    I am particularly interested in applying artificial intelligence and data-driven methods to complex real-world problems, with a focus on developing reliable, practical and interpretable solutions.
+                </p>
+
+            </div>
+
+            <div class="about-highlight">
+
+                <h3>
+                    Areas of Interest
+                </h3>
+
+                <p>
+                    Machine Learning<br>
+                    Artificial Intelligence<br>
+                    Data Analytics<br>
+                    Deep Learning<br>
+                    Natural Language Processing<br>
+                    Retrieval-Augmented Generation<br>
+                    Intelligent Information Extraction
+                </p>
+
+            </div>
 
         </div>
 
-    </footer>
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <div class="section-label">
+            02 — Technical Skills
+        </div>
+
+        <h2 class="section-title">
+            My toolkit
+        </h2>
+
+        <div class="skills-grid">
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Programming & Data
+                </h3>
+
+                <p>
+                    Python · Pandas · NumPy · Scikit-learn · MATLAB · Jupyter
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Machine Learning
+                </h3>
+
+                <p>
+                    Classification · Feature Engineering · Model Evaluation · Supervised Learning · Predictive Modelling
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Deep Learning
+                </h3>
+
+                <p>
+                    PyTorch · Neural Networks · CNNs · Neural Computing · Deep Learning
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    AI & NLP
+                </h3>
+
+                <p>
+                    RAG · LLMs · NLP · Multimodal AI · Prompt Engineering · Azure OpenAI
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Data Analytics
+                </h3>
+
+                <p>
+                    Exploratory Data Analysis · Data Cleaning · Data Visualisation · Statistical Analysis · Pattern Analysis
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Information Retrieval
+                </h3>
+
+                <p>
+                    FAISS · Embeddings · Semantic Retrieval · PyMuPDF · Structured Information Extraction
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <div class="section-label">
+            03 — Projects
+        </div>
+
+        <h2 class="section-title">
+            Selected data science work
+        </h2>
+
+
+        <div class="projects">
+
+
+            <!-- =========================
+                 PROJECT 01 — RAG
+            ========================= -->
+
+            <div class="project featured">
+
+                <div class="project-number">
+                    PROJECT 01 · MSc DISSERTATION · FEATURED
+                </div>
+
+                <h3>
+                    Multimodal RAG for Structured Financial Document Extraction
+                </h3>
+
+                <p>
+                    Developed a multimodal Retrieval-Augmented Generation system for extracting structured financial information from heterogeneous financial documents. The system combined visual document processing, multimodal AI, embeddings and semantic retrieval to improve the reliability of information extraction.
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">Python</span>
+                    <span class="tag">Azure OpenAI</span>
+                    <span class="tag">RAG</span>
+                    <span class="tag">FAISS</span>
+                    <span class="tag">PyMuPDF</span>
+                    <span class="tag">Embeddings</span>
+                    <span class="tag">Multimodal AI</span>
+
+                </div>
+
+                <a class="project-link"
+                   onclick="toggleProject('rag')">
+                    View full project →
+                </a>
+
+
+                <div class="project-details" id="rag">
+
+                    <h4>Overview</h4>
+
+                    <p>
+                        This MSc Data Science dissertation investigated how multimodal Retrieval-Augmented Generation can be used to extract crucial financial information from complex and inconsistently formatted financial reports.
+                    </p>
+
+                    <p>
+                        Financial documents frequently contain information inside tables, footnotes and visually structured pages. Conventional text extraction can lose important relationships between financial labels and their corresponding values. The project therefore adopted a vision-first document-processing approach.
+                    </p>
+
+
+                    <h4>Objective</h4>
+
+                    <ul>
+                        <li>Investigate the effectiveness of multimodal RAG for financial information extraction.</li>
+                        <li>Evaluate whether vision-based extraction improves the preservation of document structure.</li>
+                        <li>Investigate the effect of retrieval grounding on response reliability.</li>
+                        <li>Evaluate the influence of document structure and extraction quality on system performance.</li>
+                    </ul>
+
+
+                    <h4>Methodology</h4>
+
+                    <p>
+                        PDF documents were processed using PyMuPDF. Individual pages were rendered as images and supplied to an Azure OpenAI multimodal model.
+                    </p>
+
+                    <p>
+                        The model extracted visible information while preserving financial tables using Markdown. Page-level representations were subsequently converted into embeddings using an Azure OpenAI embedding model.
+                    </p>
+
+                    <p>
+                        The embeddings were indexed using FAISS. When a user submitted a query, the system retrieved the most relevant document content and supplied it to the language model as contextual evidence.
+                    </p>
+
+                    <p>
+                        This retrieval-grounded approach was designed to reduce unsupported responses and ensure that extracted financial information was based on the contents of the source documents.
+                    </p>
+
+
+                    <h4>System Pipeline</h4>
+
+                    <div style="
+                        border:1px solid #272727;
+                        background:#101010;
+                        padding:25px;
+                        border-radius:8px;
+                        color:#999;
+                        font-size:14px;
+                        margin:20px 0;
+                        text-align:center;
+                    ">
+
+                        Financial PDF
+                        <br>
+                        ↓
+                        <br>
+                        PyMuPDF
+                        <br>
+                        ↓
+                        <br>
+                        Page Images
+                        <br>
+                        ↓
+                        <br>
+                        Azure OpenAI Multimodal Model
+                        <br>
+                        ↓
+                        <br>
+                        Structured Markdown Extraction
+                        <br>
+                        ↓
+                        <br>
+                        Page-Level Embeddings
+                        <br>
+                        ↓
+                        <br>
+                        FAISS Vector Database
+                        <br>
+                        ↓
+                        <br>
+                        Query Retrieval
+                        <br>
+                        ↓
+                        <br>
+                        Retrieved Context
+                        <br>
+                        ↓
+                        <br>
+                        Grounded Financial Answer
+
+                    </div>
+
+
+                    <h4>Evaluation</h4>
+
+                    <p>
+                        The final evaluation used manually verified queries covering multiple financial documents and financial metrics.
+                    </p>
+
+
+                    <div class="results">
+
+                        <div class="result-box">
+                            <div class="result-number">96.88%</div>
+                            <div class="result-label">Accuracy</div>
+                        </div>
+
+                        <div class="result-box">
+                            <div class="result-number">100%</div>
+                            <div class="result-label">Precision</div>
+                        </div>
+
+                        <div class="result-box">
+                            <div class="result-number">96.88%</div>
+                            <div class="result-label">Recall</div>
+                        </div>
+
+                        <div class="result-box">
+                            <div class="result-number">98.41%</div>
+                            <div class="result-label">F1 Score</div>
+                        </div>
+
+                    </div>
+
+
+                    <h4>Key Findings</h4>
+
+                    <p>
+                        The results demonstrated that the multimodal extraction and retrieval approach was highly effective at locating and returning the required financial information.
+                    </p>
+
+                    <p>
+                        The project also highlighted the importance of preserving the visual structure of financial documents. Tables and their relationships cannot always be represented effectively through conventional plain-text extraction.
+                    </p>
+
+
+                    <h4>Technologies</h4>
+
+                    <p>
+                        Python · Azure OpenAI · Multimodal LLMs · Retrieval-Augmented Generation · FAISS · PyMuPDF · Embeddings · PDF Processing · Markdown
+                    </p>
+
+
+                    <h4>Skills Demonstrated</h4>
+
+                    <ul>
+                        <li>AI system development</li>
+                        <li>Multimodal document processing</li>
+                        <li>Retrieval-Augmented Generation</li>
+                        <li>Vector search and embeddings</li>
+                        <li>Prompt engineering</li>
+                        <li>Python development</li>
+                        <li>Model evaluation</li>
+                        <li>Structured information extraction</li>
+                    </ul>
+
+
+                    <h4>Project Files</h4>
+
+                    <p>
+                        Project reports, source code, notebooks, evaluation results and supporting materials will be added here.
+                    </p>
+
+                    <div class="file-buttons">
+
+                        <a href="#"
+                           class="file-button">
+                            Dissertation
+                        </a>
+
+                        <a href="#"
+                           class="file-button">
+                            Source Code
+                        </a>
+
+                        <a href="#"
+                           class="file-button">
+                            Evaluation
+                        </a>
+
+                        <a href="#"
+                           class="file-button">
+                            Results
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 PROJECT 02 — SVM CNN
+            ========================= -->
+
+            <div class="project">
+
+                <div class="project-number">
+                    PROJECT 02 · MACHINE LEARNING
+                </div>
+
+                <h3>
+                    SVM vs CNN — Adult Income Classification
+                </h3>
+
+                <p>
+                    Comparative study of a Support Vector Machine and a CNN-based neural network for income classification using the Adult Income dataset.
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">Python</span>
+                    <span class="tag">Scikit-learn</span>
+                    <span class="tag">PyTorch</span>
+                    <span class="tag">SVM</span>
+                    <span class="tag">CNN</span>
+                    <span class="tag">Classification</span>
+
+                </div>
+
+                <a class="project-link"
+                   onclick="toggleProject('svm')">
+                    View full project →
+                </a>
+
+
+                <div class="project-details" id="svm">
+
+                    <h4>Overview</h4>
+
+                    <p>
+                        This project compared traditional machine learning and neural-network approaches to classification using the Adult Income dataset.
+                    </p>
+
+                    <h4>Dataset</h4>
+
+                    <p>
+                        The Adult Income dataset contains approximately 48,842 records and 14 attributes. The objective was to classify individuals according to their income category.
+                    </p>
+
+                    <h4>Data Preparation</h4>
+
+                    <ul>
+                        <li>Categorical variables were encoded using LabelEncoder.</li>
+                        <li>Numerical features were standardised using StandardScaler.</li>
+                        <li>The dataset was divided using an 80:20 train/test split.</li>
+                    </ul>
+
+                    <h4>Support Vector Machine</h4>
+
+                    <p>
+                        A linear-kernel Support Vector Machine was developed as the traditional machine-learning baseline.
+                    </p>
+
+                    <h4>Convolutional Neural Network</h4>
+
+                    <p>
+                        A CNN-based neural network was implemented using PyTorch and adapted for the tabular dataset. The model used DataLoader, CrossEntropyLoss and the Adam optimiser and was trained for 10 epochs.
+                    </p>
+
+                    <h4>Results</h4>
+
+                    <table class="comparison">
+
+                        <tr>
+                            <th>Model</th>
+                            <th>Accuracy</th>
+                            <th>Higher-Income Recall</th>
+                            <th>Higher-Income F1</th>
+                        </tr>
+
+                        <tr>
+                            <td>SVM</td>
+                            <td>82%</td>
+                            <td>30%</td>
+                            <td>44%</td>
+                        </tr>
+
+                        <tr>
+                            <td>CNN</td>
+                            <td>85%</td>
+                            <td>61%</td>
+                            <td>66%</td>
+                        </tr>
+
+                    </table>
+
+                    <h4>Key Finding</h4>
+
+                    <p>
+                        The CNN achieved higher overall accuracy and substantially improved detection of the higher-income class. The project demonstrated why accuracy alone can be misleading when evaluating classification problems with uneven class distributions.
+                    </p>
+
+                    <h4>Technologies</h4>
+
+                    <p>
+                        Python · Scikit-learn · PyTorch · Pandas · NumPy · Machine Learning · Deep Learning
+                    </p>
+
+                    <h4>Skills Demonstrated</h4>
+
+                    <ul>
+                        <li>Machine learning</li>
+                        <li>Deep learning</li>
+                        <li>SVM classification</li>
+                        <li>PyTorch</li>
+                        <li>Data preprocessing</li>
+                        <li>Model comparison</li>
+                        <li>Performance evaluation</li>
+                    </ul>
+
+                    <div class="file-buttons">
+
+                        <a href="#"
+                           class="file-button">
+                            Report
+                        </a>
+
+                        <a href="#"
+                           class="file-button">
+                            Source Code
+                        </a>
+
+                        <a href="#"
+                           class="file-button">
+                            Results
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 PROJECT 03 — BIKE
+            ========================= -->
+
+            <div class="project">
+
+                <div class="project-number">
+                    PROJECT 03 · VISUAL ANALYTICS
+                </div>
+
+                <h3>
+                    Bike Sharing — Visual Analytics
+                </h3>
+
+                <p>
+                    Analysed a public bike-sharing dataset to investigate usage patterns, trends and relationships between demand, environmental conditions and temporal factors.
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">Data Analysis</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Visualisation</span>
+                    <span class="tag">EDA</span>
+
+                </div>
+
+                <a class="project-link"
+                   onclick="toggleProject('bike')">
+                    View full project →
+                </a>
+
+
+                <div class="project-details" id="bike">
+
+                    <h4>Overview</h4>
+
+                    <p>
+                        This Visual Analytics project explored a public bike-sharing dataset to identify patterns in bike demand and investigate relationships between usage and external factors.
+                    </p>
+
+                    <h4>Objectives</h4>
+
+                    <ul>
+                        <li>Explore bike-sharing usage patterns.</li>
+                        <li>Identify trends in demand.</li>
+                        <li>Investigate relationships between variables.</li>
+                        <li>Analyse temporal and environmental factors.</li>
+                        <li>Communicate findings through visual analytics.</li>
+                    </ul>
+
+                    <h4>Methodology</h4>
+
+                    <p>
+                        The project followed an exploratory visual analytics workflow involving data inspection, preparation, exploratory analysis, visualisation and interpretation.
+                    </p>
+
+                    <p>
+                        Visualisations were used to investigate relationships involving time, seasonality, weather, temperature, demand and user behaviour.
+                    </p>
+
+                    <h4>Key Learning</h4>
+
+                    <p>
+                        The project demonstrated how effective visualisation can reveal relationships and trends that may not be immediately visible in raw numerical data.
+                    </p>
+
+                    <h4>Skills Demonstrated</h4>
+
+                    <ul>
+                        <li>Exploratory data analysis</li>
+                        <li>Data visualisation</li>
+                        <li>Pattern analysis</li>
+                        <li>Data interpretation</li>
+                        <li>Analytical communication</li>
+                    </ul>
+
+                    <div class="file-buttons">
+
+                        <a href="#"
+                           class="file-button">
+                            Report
+                        </a>
+
+                        <a href="#"
+                           class="file-button">
+                            Analysis
+                        </a>
+
+                        <a href="#"
+                           class="file-button">
+                            Visualisations
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 PROJECT 04 — BANKNOTE
+            ========================= -->
+
+            <div class="project">
+
+                <div class="project-number">
+                    PROJECT 04 · NEURAL COMPUTING
+                </div>
+
+                <h3>
+                    Banknote Authentication
+                </h3>
+
+                <p>
+                    Applied neural computing and machine-learning techniques to the Banknote Authentication dataset to classify genuine and counterfeit banknotes.
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">Neural Computing</span>
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Classification</span>
+                    <span class="tag">Data Analysis</span>
+
+                </div>
+
+                <a class="project-link"
+                   onclick="toggleProject('banknote')">
+                    View full project →
+                </a>
+
+
+                <div class="project-details" id="banknote">
+
+                    <h4>Overview</h4>
+
+                    <p>
+                        This Neural Computing project investigated the use of machine-learning techniques to distinguish genuine banknotes from counterfeit examples using numerical characteristics derived from banknote images.
+                    </p>
+
+                    <h4>Dataset</h4>
+
+                    <p>
+                        The Banknote Authentication dataset contains numerical measurements derived from images of banknotes. These measurements provide features that can be used for binary classification.
+                    </p>
+
+                    <h4>Methodology</h4>
+
+                    <ul>
+                        <li>Dataset inspection</li>
+                        <li>Feature and target preparation</li>
+                        <li>Data preprocessing</li>
+                        <li>Neural model development</li>
+                        <li>Model training</li>
+                        <li>Prediction</li>
+                        <li>Performance evaluation</li>
+                    </ul>
+
+                    <h4>Classification Problem</h4>
+
+                    <p>
+                        The model was designed to distinguish between genuine and counterfeit banknotes based on the numerical characteristics contained within the dataset.
+                    </p>
+
+                    <h4>Key Learning</h4>
+
+                    <p>
+                        The project provided practical experience in applying neural computing to a real-world binary classification problem and demonstrated the importance of preprocessing, model configuration and appropriate evaluation.
+                    </p>
+
+                    <h4>Skills Demonstrated</h4>
+
+                    <ul>
+                        <li>Neural computing</li>
+                        <li>Machine learning</li>
+                        <li>Classification</li>
+                        <li>Data preprocessing</li>
+                        <li>Model evaluation</li>
+                    </ul>
+
+                    <div class="file-buttons">
+
+                        <a href="#"
+                           class="file-button">
+                            Report
+                        </a>
+
+                        <a href="#"
+                           class="file-button">
+                            Source Code
+                        </a>
+
+                        <a href="#"
+                           class="file-button">
+                            Results
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+    <div class="container contact">
+
+        <div class="section-label">
+            04 — Contact
+        </div>
+
+        <h2>
+            Let's connect.
+        </h2>
+
+        <p>
+            I am interested in opportunities across Data Science, Machine Learning, Artificial Intelligence and Data Analytics.
+        </p>
+
+        <div class="contact-links">
+
+            <a href="mailto:emin_aleshaiker@hotmail.com">
+                Email
+            </a>
+
+            <a href="https://www.linkedin.com/in/emin-aleshaiker-269534204/"
+               target="_blank">
+                LinkedIn
+            </a>
+
+            <a href="https://github.com/Eminal12"
+               target="_blank">
+                GitHub
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        © 2026 Emin Aleshaiker · Data Science & AI Portfolio
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    function toggleProject(projectId) {
+
+        const project = document.getElementById(projectId);
+
+        if (project.classList.contains("active")) {
+
+            project.classList.remove("active");
+
+        } else {
+
+            project.classList.add("active");
+
+            setTimeout(function() {
+
+                project.scrollIntoView({
+                    behavior: "smooth",
+                    block: "nearest"
+                });
+
+            }, 100);
+
+        }
+
+    }
+
+</script>
 
 
 </body>
