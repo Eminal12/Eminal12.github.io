@@ -1,10 +1,1037 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Emin Aleshaiker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Emin Aleshaiker | Data Scientist</title>
+
+    <meta name="description" content="Emin Aleshaiker — Data Scientist specialising in machine learning, artificial intelligence, data analytics and financial data.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background: #080808;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(8, 8, 8, 0.9);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid #202020;
+        }
+
+        .nav-container {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #999;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 70px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-label {
+            color: #777;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(52px, 9vw, 92px);
+            line-height: 0.98;
+            letter-spacing: -5px;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 span {
+            color: #777;
+        }
+
+        .hero-description {
+            max-width: 750px;
+            font-size: 19px;
+            color: #aaa;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 22px;
+            border: 1px solid #444;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .button.primary {
+            background: #fff;
+            color: #000;
+            border-color: #fff;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            border-color: #fff;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 110px 0;
+            border-top: 1px solid #1d1d1d;
+        }
+
+        .section-label {
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 40px;
+            line-height: 1.15;
+            margin-bottom: 45px;
+            letter-spacing: -1.5px;
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 70px;
+        }
+
+        .about-text p {
+            color: #aaa;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+
+        .education-card {
+            border-left: 1px solid #444;
+            padding-left: 25px;
+            margin-bottom: 32px;
+        }
+
+        .education-card h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .education-card p {
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* SKILLS */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .skill-card {
+            border: 1px solid #252525;
+            padding: 25px;
+            border-radius: 8px;
+            background: #0d0d0d;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            border-color: #444;
+            transform: translateY(-3px);
+        }
+
+        .skill-card h3 {
+            margin-bottom: 12px;
+            font-size: 17px;
+        }
+
+        .skill-card p {
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .project {
+            border: 1px solid #272727;
+            border-radius: 10px;
+            padding: 30px;
+            background: #0d0d0d;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            border-color: #555;
+            transform: translateY(-4px);
+        }
+
+        .project-number {
+            color: #555;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .project h3 {
+            font-size: 22px;
+            margin-bottom: 13px;
+        }
+
+        .project p {
+            color: #999;
+            font-size: 15px;
+            margin-bottom: 22px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        .tag {
+            border: 1px solid #333;
+            padding: 5px 9px;
+            border-radius: 4px;
+            color: #888;
+            font-size: 12px;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #ccc;
+            font-size: 13px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 3px;
+        }
+
+        .project-link:hover {
+            color: #fff;
+        }
+
+        /* EXPERIENCE */
+
+        .experience-item {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 40px;
+            padding: 35px 0;
+            border-bottom: 1px solid #222;
+        }
+
+        .experience-date {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .experience-content h3 {
+            font-size: 21px;
+            margin-bottom: 3px;
+        }
+
+        .company {
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .experience-content ul {
+            padding-left: 20px;
+            color: #999;
+        }
+
+        .experience-content li {
+            margin-bottom: 8px;
+        }
+
+        /* EDUCATION */
+
+        .education-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .education-box {
+            border: 1px solid #252525;
+            background: #0d0d0d;
+            border-radius: 8px;
+            padding: 28px;
+        }
+
+        .education-box h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .education-box .university {
+            color: #aaa;
+            margin-bottom: 8px;
+        }
+
+        .education-box .details {
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: clamp(40px, 7vw, 70px);
+            letter-spacing: -3px;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            color: #888;
+            max-width: 620px;
+            margin: 0 auto 30px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: #aaa;
+            border-bottom: 1px solid #444;
+            padding-bottom: 3px;
+        }
+
+        .contact-links a:hover {
+            color: #fff;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #222;
+            padding: 30px 0;
+            color: #555;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                letter-spacing: -3px;
+            }
+
+            .about-grid,
+            .skills-grid,
+            .projects,
+            .education-list {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-item {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Welcome to Emin Aleshaiker's Portfolio</h1>
-    <p>Data Scientist | AI & Machine Learning |</p>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+        <div class="container nav-container">
+
+            <a href="#home" class="logo">EA.</a>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <div class="hero-label">
+                    Data Science · AI · Machine Learning
+                </div>
+
+                <h1>
+                    Emin<br>
+                    <span>Aleshaiker</span>
+                </h1>
+
+                <p class="hero-description">
+                    Data Scientist specialising in machine learning, artificial intelligence, data analytics and intelligent systems, with a focus on applying data-driven methods to real-world problems.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#projects" class="button primary">
+                        View Projects
+                    </a>
+
+                    <a href="#contact" class="button">
+                        Contact Me
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/emin-aleshaiker-269534204/" target="_blank" class="button">
+                        LinkedIn
+                    </a>
+
+                    <a href="https://github.com/Eminal12" target="_blank" class="button">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-label">
+                01 — About
+            </div>
+
+            <h2 class="section-title">
+                Turning data into<br>
+                intelligent solutions.
+            </h2>
+
+            <div class="about-grid">
+
+                <div class="about-text">
+
+                    <p>
+                        I am a Data Scientist with an MSc in Data Science and a strong interest in machine learning, artificial intelligence, statistical analysis and financial data.
+                    </p>
+
+                    <p>
+                        My academic and project experience covers supervised learning, deep learning, natural language processing, computer vision, data analytics and Retrieval-Augmented Generation.
+                    </p>
+
+                    <p>
+                        I enjoy working with complex datasets, identifying meaningful patterns and developing practical data-driven solutions. I am particularly interested in applying AI and machine learning to financial, business and technology problems.
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <div class="education-card">
+
+                        <h3>MSc Data Science</h3>
+
+                        <p>
+                            City, University of London<br>
+                            Merit
+                        </p>
+
+                    </div>
+
+                    <div class="education-card">
+
+                        <h3>BEng Mechanical Engineering</h3>
+
+                        <p>
+                            City, University of London<br>
+                            First Class
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <div class="section-label">
+                02 — Technical Skills
+            </div>
+
+            <h2 class="section-title">
+                My toolkit
+            </h2>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+
+                    <h3>Programming & Data</h3>
+
+                    <p>
+                        Python · Pandas · NumPy · Scikit-learn · MATLAB · R · Excel · Jupyter
+                    </p>
+
+                </div>
+
+                <div class="skill-card">
+
+                    <h3>Machine Learning</h3>
+
+                    <p>
+                        Classification · Regression · Feature Engineering · Model Evaluation · Predictive Modelling · Supervised Learning
+                    </p>
+
+                </div>
+
+                <div class="skill-card">
+
+                    <h3>Deep Learning</h3>
+
+                    <p>
+                        PyTorch · TensorFlow · Keras · Neural Networks · Deep Learning
+                    </p>
+
+                </div>
+
+                <div class="skill-card">
+
+                    <h3>AI & NLP</h3>
+
+                    <p>
+                        RAG · LLMs · NLP · Computer Vision · Prompt Engineering · Azure OpenAI
+                    </p>
+
+                </div>
+
+                <div class="skill-card">
+
+                    <h3>Data Analytics</h3>
+
+                    <p>
+                        Exploratory Data Analysis · Statistical Analysis · Data Cleaning · Data Visualisation · Anomaly Detection
+                    </p>
+
+                </div>
+
+                <div class="skill-card">
+
+                    <h3>AI & Retrieval</h3>
+
+                    <p>
+                        FAISS · Embeddings · Semantic Retrieval · PyMuPDF · Hugging Face · Structured Information Extraction
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <div class="section-label">
+                03 — Projects
+            </div>
+
+            <h2 class="section-title">
+                Selected data science work
+            </h2>
+
+            <div class="projects">
+
+
+                <!-- PROJECT 1 -->
+
+                <div class="project">
+
+                    <div class="project-number">
+                        PROJECT 01 · MSc DISSERTATION
+                    </div>
+
+                    <h3>
+                        Multimodal RAG for Financial Document Extraction
+                    </h3>
+
+                    <p>
+                        Developed a multimodal Retrieval-Augmented Generation system for extracting structured financial information from complex and inconsistently formatted financial reports. The system combined document image processing, vision-based extraction, embeddings and semantic retrieval.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Azure OpenAI</span>
+                        <span class="tag">RAG</span>
+                        <span class="tag">FAISS</span>
+                        <span class="tag">PyMuPDF</span>
+                        <span class="tag">Embeddings</span>
+                        <span class="tag">NLP</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        Project details →
+                    </a>
+
+                </div>
+
+
+                <!-- PROJECT 2 -->
+
+                <div class="project">
+
+                    <div class="project-number">
+                        PROJECT 02 · MACHINE LEARNING
+                    </div>
+
+                    <h3>
+                        SVM vs CNN — Adult Income Classification
+                    </h3>
+
+                    <p>
+                        Conducted a comparative study of Support Vector Machines and a CNN-based model for predicting income classification using the Adult Income dataset. The project covered data preprocessing, feature encoding, scaling, model training and evaluation.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Scikit-learn</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">SVM</span>
+                        <span class="tag">CNN</span>
+                        <span class="tag">Classification</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        Project details →
+                    </a>
+
+                </div>
+
+
+                <!-- PROJECT 3 -->
+
+                <div class="project">
+
+                    <div class="project-number">
+                        PROJECT 03 · VISUAL ANALYTICS
+                    </div>
+
+                    <h3>
+                        Bike Sharing — Visual Analytics
+                    </h3>
+
+                    <p>
+                        Analysed a public bike-sharing dataset to explore usage patterns, trends and relationships between different variables. The project focused on transforming raw data into meaningful visual insights.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Data Analysis</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Visualisation</span>
+                        <span class="tag">EDA</span>
+                        <span class="tag">Statistics</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        Project details →
+                    </a>
+
+                </div>
+
+
+                <!-- PROJECT 4 -->
+
+                <div class="project">
+
+                    <div class="project-number">
+                        PROJECT 04 · NEURAL COMPUTING
+                    </div>
+
+                    <h3>
+                        Banknote Authentication
+                    </h3>
+
+                    <p>
+                        Applied neural computing and machine-learning techniques to the Banknote Authentication dataset to classify genuine and counterfeit banknotes. The project involved data preparation, model development and performance evaluation.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Neural Networks</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Classification</span>
+                        <span class="tag">Model Evaluation</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        Project details →
+                    </a>
+
+                </div>
+
+
+                <!-- FUTURE PROJECT -->
+
+                <div class="project">
+
+                    <div class="project-number">
+                        PROJECT 05 · COMING SOON
+                    </div>
+
+                    <h3>
+                        More Data Science Projects
+                    </h3>
+
+                    <p>
+                        This portfolio will continue to grow with additional projects covering machine learning, data analytics, artificial intelligence and financial data.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">AI</span>
+                        <span class="tag">Data Science</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+
+    <section id="experience">
+
+        <div class="container">
+
+            <div class="section-label">
+                04 — Experience
+            </div>
+
+            <h2 class="section-title">
+                Experience
+            </h2>
+
+
+            <div class="experience-item">
+
+                <div class="experience-date">
+                    Jul 2024 — Present
+                </div>
+
+                <div class="experience-content">
+
+                    <h3>
+                        On-Site Manager
+                    </h3>
+
+                    <div class="company">
+                        Amazon DSP · London
+                    </div>
+
+                    <ul>
+
+                        <li>
+                            Managed day-to-day delivery operations, including route planning, dispatch and workflow coordination.
+                        </li>
+
+                        <li>
+                            Monitored key performance metrics and operational performance to identify issues and improve productivity.
+                        </li>
+
+                        <li>
+                            Led and supported delivery associates through coaching, performance management and operational problem-solving.
+                        </li>
+
+                        <li>
+                            Worked in a fast-paced environment requiring data-driven decision-making, organisation and prioritisation.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="experience-item">
+
+                <div class="experience-date">
+                    Financial Data Analysis
+                </div>
+
+                <div class="experience-content">
+
+                    <h3>
+                        Financial Data Analysis Intern
+                    </h3>
+
+                    <div class="company">
+                        Careline
+                    </div>
+
+                    <ul>
+
+                        <li>
+                            Analysed and interpreted financial and operational data to identify trends, investigate anomalies and support data-driven decision-making.
+                        </li>
+
+                        <li>
+                            Produced Excel reports and performance analyses, transforming financial data into clear insights.
+                        </li>
+
+                        <li>
+                            Conducted data validation and quality checks to identify discrepancies and maintain reliable financial records.
+                        </li>
+
+                        <li>
+                            Monitored financial and operational performance indicators and communicated findings to support business performance.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section id="education">
+
+        <div class="container">
+
+            <div class="section-label">
+                05 — Education
+            </div>
+
+            <h2 class="section-title">
+                Education
+            </h2>
+
+            <div class="education-list">
+
+                <div class="education-box">
+
+                    <h3>
+                        MSc Data Science
+                    </h3>
+
+                    <div class="university">
+                        City, University of London
+                    </div>
+
+                    <div class="details">
+                        Merit · Data Science · Machine Learning · Neural Computing · NLP · Visual Analytics
+                    </div>
+
+                </div>
+
+
+                <div class="education-box">
+
+                    <h3>
+                        BEng Mechanical Engineering
+                    </h3>
+
+                    <div class="university">
+                        City, University of London
+                    </div>
+
+                    <div class="details">
+                        First Class · Quantitative Analysis · Mathematical Modelling · Engineering Analysis
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <div class="container contact">
+
+            <div class="section-label">
+                06 — Contact
+            </div>
+
+            <h2>
+                Let's connect.
+            </h2>
+
+            <p>
+                I'm interested in opportunities across Data Science, Machine Learning, Artificial Intelligence, Data Analytics and Quantitative Research.
+            </p>
+
+            <div class="contact-links">
+
+                <a href="mailto:emin_aleshaiker@hotmail.com">
+                    Email
+                </a>
+
+                <a href="https://www.linkedin.com/in/emin-aleshaiker-269534204/" target="_blank">
+                    LinkedIn
+                </a>
+
+                <a href="https://github.com/Eminal12" target="_blank">
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container">
+
+            © 2026 Emin Aleshaiker · Data Science Portfolio
+
+        </div>
+
+    </footer>
+
 </body>
 </html>
